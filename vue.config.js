@@ -22,5 +22,9 @@ module.exports = {
   // 生产环境是否生成 sourceMap 文件
   // SourceMap 一个存储源代码与编译代码对应位置映射的信息文件，详情百度
   // 生产环境是否生成 sourceMap 文件，详细查看阮一峰老师这篇http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html
-  productionSourceMap: false
+  productionSourceMap: false,
+  // 配置 webpack-dev-server 行为。所有 webpack-dev-server 的选项都支持 https://webpack.js.org/configuration/dev-server/
+  devServer: {
+    port: 8089
+  }
 };
