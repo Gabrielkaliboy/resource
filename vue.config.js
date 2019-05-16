@@ -1,3 +1,9 @@
+//用来设置简写路径
+const path = require("path");
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
 //官网  https://cli.vuejs.org/zh/config/#baseurl
 module.exports = {
   //默认情况下，Vue CLI 会假设你的应用是被部署在一个域名的根路径上，例如 https://www.my-app.com/。
@@ -26,5 +32,12 @@ module.exports = {
   // 配置 webpack-dev-server 行为。所有 webpack-dev-server 的选项都支持 https://webpack.js.org/configuration/dev-server/
   devServer: {
     port: 8089
+  },
+  //用来实现路径简写
+  chainWebpack: config => {
+    config.resolve.alias
+      .set("@_a", resolve("src/assets"))
+      .set("@_c", resolve("src/components"))
+      .set("@_v", resolve("src/views"));
   }
 };
