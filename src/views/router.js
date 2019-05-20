@@ -1,4 +1,5 @@
 import loginRouter from './login/router'; //登录页
+import testRouter from './test/router';//测试页面
 const allRouters = [
 	{
 		name: 'home',
@@ -10,7 +11,7 @@ const allRouters = [
 			title: '首页',
 			keepAlive: true
 		},
-		children: [].concat(loginRouter)
+		children: [].concat(loginRouter,testRouter)
 	}
 ];
 export default allRouters;
