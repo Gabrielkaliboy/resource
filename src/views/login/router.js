@@ -1,7 +1,7 @@
 const loginRouter = [
 	{
 		name:'login',
-		path:'/login',
+		path:'login',
 		component:function(resolve){
 			require(['./Login.vue'],resolve);
 		}

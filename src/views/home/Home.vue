@@ -3,6 +3,7 @@
 		<div v-for="(item,index) in menuList" :key="index">
 			<a @click="menuClick(item)">{{ item.name }}</a>
 		</div>
+		<router-view></router-view>
   </div>
 </template>
 
